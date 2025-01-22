@@ -1,2 +1,21 @@
 # SQL
 SQL portfolio 
+--#1Write a SQL query that orders the items by price
+
+SELECT item_name
+FROM superstore
+ORDER BY price
+;
+
+--#2Write your own SQL query that will show a statistic about the item prices
+SELECT SUM(item_id),
+price
+FROM superstore
+GROUP BY item_name;
+
+--#3Write your own SQL query that will show a statistic about the price for items in the category of "Kitchen Supplies".
+SELECT SUM(price),
+'Kitchen Supplies'
+FROM superstore;
+
+SELECT SUM('Air Purifier');
